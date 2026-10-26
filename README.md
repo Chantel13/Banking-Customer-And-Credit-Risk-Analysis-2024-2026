@@ -65,6 +65,10 @@ Among the cities analysed, Johannesburg had the highest home-loan payment-risk r
 
 This project demonstrates how SQL can be used to move from descriptive reporting to targeted investigation. It connects operational metrics to questions about lending demand, approval outcomes, and repayment risk, then translates supported findings into practical next steps.
 
+## Banking Dashboard
+
+<img scr="banking_credit_risk_dasboard" width="600">
+
 ## Limitations
 
 - Repayment-risk percentages are based on payment records, not unique borrowers.
