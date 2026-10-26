@@ -60,6 +60,35 @@ Approximately **20.08%** of recorded home-loan payment records were late or miss
 
 ### 5. Repayment risk differed by city
 Among the cities analysed, Johannesburg had the highest home-loan payment-risk rate at **24.67%**, while Durban had the lowest at **12.84%**.
+```sql
+WITH LoanRisk AS
+(
+    SELECT
+        c.City,
+        L.LoanType,
+        COUNT(LP.PaymentID) AS TotalPayments,
+        SUM( CASE WHEN LP.PaymentStatus IN ('Late', 'Missed') THEN 1 ELSE 0 END) AS RiskPayments
+    FROM Customers as c
+        JOIN Loans AS L
+            ON c.customerid = l.customerid
+        JOIN LoanPayments AS LP
+            ON L.LoanID = LP.LoanID
+    WHERE l.LoanType = 'Home'
+    GROUP BY 
+    c.City, 
+    L.LoanType
+)
+SELECT
+    City,
+    LoanType,
+    TotalPayments,
+    RiskPayments,
+    CAST( RiskPayments * 100.0 / NULLIF(TotalPayments, 0)
+    AS DECIMAL(5,2)
+) AS RiskPercentage
+FROM LoanRisk
+ORDER BY RiskPercentage DESC;
+```
 
 **Recommendation:** Investigate the geographic differences further before targeting interventions. The analysis identifies a pattern but does not establish its cause.
 
