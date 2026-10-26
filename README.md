@@ -67,7 +67,7 @@ This project demonstrates how SQL can be used to move from descriptive reporting
 
 ## Banking Dashboard
 
-<img scr="banking_credit_risk_dasboard" width="600">
+<img scr="banking_credit_risk_dasboard.png" width="600">
 
 ## Limitations
 
