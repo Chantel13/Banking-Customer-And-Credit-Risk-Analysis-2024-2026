@@ -49,6 +49,8 @@ Personal loans had the highest overall recorded loan value at approximately **R5
 ### 3. Approval rates varied across loan types
 Vehicle loans had the highest overall approval rate at **73.42%**, while business loans had the lowest at **59.21%**.
 
+<img src="Loan Approval Rates Dashboard.png" alt="Approval rates varied across loan types" width="700">
+
 Business-loan approval rates increased from **56.25% in H1 2024 to 63.89% in H1 2026**.
 
 **Recommendation:** Investigate the factors associated with approval differences, including application quality and eligibility criteria, before making changes to lending policies.
