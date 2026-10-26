@@ -37,6 +37,8 @@ Key techniques included:
 ### 1. Digital banking showed strong transaction activity
 The Mobile App recorded approximately **R6.6 million** in transaction value, compared with **R4.7 million** through Online Banking.
 
+<img scr="digital-banking.png" width="600">
+
 **Recommendation:** Investigate which services drive mobile activity and whether improvements to digital banking could encourage further adoption and reduce reliance on branch-based transactions.
 
 ### 2. Lending demand differed by loan type
