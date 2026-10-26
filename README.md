@@ -58,6 +58,8 @@ Business-loan approval rates increased from **56.25% in H1 2024 to 63.89% in H1 
 ### 4. Home loans showed the highest repayment-risk rate
 Approximately **20.08%** of recorded home-loan payment records were late or missed, compared with **16.28%** for vehicle loans.
 
+![Home loans showed the highest repayment-risk rate](home-loan-risk-payment.png)
+
 **Recommendation:** Review home-loan repayment patterns and consider early-warning monitoring to identify accounts that may need support.
 
 ### 5. Repayment risk differed by city
