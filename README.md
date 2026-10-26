@@ -44,6 +44,22 @@ The Mobile App recorded approximately **R6.6 million** in transaction value, com
 ### 2. Lending demand differed by loan type
 Personal loans had the highest overall recorded loan value at approximately **R51.3 million**. In the first half of each year, vehicle-loan applications increased from **25 in 2024 to 39 in 2026**, while personal-loan applications declined from **65 to 54**.
 
+```sql
+SELECT
+    YEAR(ApplicationDate) AS Year,
+    LoanType,
+    COUNT(LoanID) AS ApplicationVolume,
+    SUM(LoanAmount) AS TotalLoanValue
+FROM Loans
+WHERE ApplicationDate IS NOT NULL
+  AND DATEPART(QUARTER, ApplicationDate) <= 2
+GROUP BY
+    YEAR(ApplicationDate),
+    LoanType
+ORDER BY
+    Year, ApplicationVolume DESC;
+```
+
 **Recommendation:** Monitor these changing patterns when reviewing lending demand and planning product-specific campaigns.
 
 ### 3. Approval rates varied across loan types
